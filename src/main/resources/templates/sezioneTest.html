@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http//www.thymeleaf.org">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link th:href="@{/css/cssSito.css}" rel="stylesheet">
+<style>
+.dot {
+	height: 50px;
+	width: 50px;
+	background-color: black;
+	border-radius: 50%;
+	display: inline-block;
+	font-size: 30px;
+	font-family: sans-serif;
+}
+
+.attack {
+	font-weight: bold;
+	font-family: sans-serif;
+	word-spacing: 1px;
+}
+</style>
+
+<title>Sezione test utente</title>
+</head>
+<body>
+	<div th:insert="fragments/header::header-block"></div>
+	<br>
+	<br>
+	<div style="text-align: center">
+		<div class="container">
+			<h1 class="titolo">Sezione Test</h1>
+			<p style="text-align: center; font-family: sans-serif;">Questa e'
+				la sezione che ti permette di esercitarti rispondendo alle domande</p>
+			<hr>
+			<div>
+				<span class="dot">1</span>
+				<p class="attack">Malware</p>
+
+			</div>
+			<div>
+				<span class="dot">2</span>
+				<p class="attack">Creare una password</p>
+			</div>
+			<div>
+				<span class="dot">3</span>
+				<p class="attack">Phising</p>
+			</div>
+
+			<div>
+				<span class="dot">4</span>
+				<p class="attack">Credential Stuffing</p>
+			</div>
+
+			<div>
+				<span class="dot">5</span>
+				<p class="attack">Credential Stuffing</p>
+			</div>
+			<div>
+				<span class="dot">6</span>
+				<p class="attack">Credential Reuse</p>
+			</div>
+
+
+
+		</div>
+
+
+	</div>
+	<div th:insert="fragments/footer::footer-block"></div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http//www.thymeleaf.org">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link th:href="@{/css/cssSito.css}" rel="stylesheet">
+<title>Test effettuato</title>
+<style>
+.modEli{
+
+	font-family:sans-serif;
+	color:blue;
+	text-align:center;
+}
+</style>
+
+</head>
+<body>
+
+	<div th:insert="fragments/header::header-block"></div> <!-- importiamo header -->
+	<br>
+	
+	<h1 class="titolo">Congratulazioni hai completato il test principale!</h1>
+	
+		<div class="pulsanti">
+				
+				<br> <br>
+				<a href="home" class="modEli">Ritorna alla home</a>
+			</div>
+	
+
+		
+	
+	
+	<div th:insert="fragments/footer::footer-block"></div> <!-- importiamo footer -->
+
+</body>
+</html>

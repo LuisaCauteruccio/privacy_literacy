@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http//www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Prova css</title>
+<link th:href="@{/css/cssSito.css}" rel="stylesheet">
+</head>
+<body>
+	<div th:insert="fragments/header::header-block"></div>
+	<br>
+	<br>
+	<h1 class="css">Questa e' una pagina di prova per il css con
+		thymeleaf</h1>
+	<div th:insert="fragments/footer::footer-block"></div>
+</body>
+</html>

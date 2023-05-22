@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http//www.thymeleaf.org">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link th:href="@{/css/cssSito.css}" rel="stylesheet">
+<title> Inserisci nuova domanda-admin</title>
+<style>
+body {
+	font-family: sans-serif;
+}
+
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+	background-color: #ddd;
+	outline: none;
+}
+
+hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+
+a {
+	color: dodgerblue;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+b {
+	font-family: sans-serif;
+}
+
+p {
+	font-family: sans-serif;
+}
+</style>
+</head>
+<body>
+
+	<div th:insert="fragments/header::header-block"></div>
+	<br>
+	<br>
+	<form method="POST" action="addDomanda" modelAttribute="dom">
+		<div class="container">
+			<h1 class="titolo">Nuova domanda</h1>
+			<p style="text-align: center;">Inserisci  i dati e crea una nuova domanda</p>
+			<hr>
+
+			<label for="idTest"><b>IdDomanda</b></label> <input type="text"
+				placeholder="Inserisci id" name="idDomanda" id="idDomanda" required>
+				
+			<label for="testo"><b>testo</b></label> <input type="text"
+				placeholder="Inserisci testo" name="testo" id="testo" required>
+				
+			<label for="risposta1"><b>Prima risposta </b></label> <input type="text"
+				placeholder="Inserisci la prima risposta" name="risposta1" id="risposta1" required>
+				
+				<label for="risposta2"><b>Seconda risposta </b></label> <input type="text"
+				placeholder="Inserisci la seconda risposta" name="risposta2" id="risposta2" required>
+				
+				<label for="risposta3"><b>Terza risposta </b></label> <input type="text"
+				placeholder="Inserisci la terza risposta" name="risposta3" id="risposta3" required>
+				
+				<label for="risposta_correta"><b>Risposta corretta </b></label> <input type="text"
+				placeholder="Inserisci la risposta corretta" name="risposta_corretta" id="risposta_corretta" required>
+
+				<label for="idTest"><b>IdTest</b></label> <input type="text"
+				placeholder="Inserisci id del test" name="idTest" id="idTest" required>
+
+			<hr>
+			
+
+			<button type="submit" class="bottoni pulsanticolori">Conferma</button>
+
+		</div>
+
+	
+	</form>
+	<div th:insert="fragments/footer::footer-block"></div>
+
+</body>
+</html>

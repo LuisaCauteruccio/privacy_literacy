@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http//www.thymeleaf.org">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link th:href="@{/css/cssSito.css}" rel="stylesheet">
+<title> Inserisci nuovo argomento studio-admin</title>
+<style>
+body {
+	font-family: sans-serif;
+}
+
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+	background-color: #ddd;
+	outline: none;
+}
+
+hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+
+a {
+	color: dodgerblue;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+b {
+	font-family: sans-serif;
+}
+
+p {
+	font-family: sans-serif;
+}
+</style>
+</head>
+<body>
+
+	<div th:insert="fragments/header::header-block"></div>
+	<br>
+	<br>
+	<form method="POST" action="addStudio" modelAttribute="studio">
+		<div class="container">
+			<h1 class="titolo">Nuovo Argomento di studio</h1>
+			<p style="text-align: center;">Inserisci  i dati e crea un nuovo argomento di studio</p>
+			<hr>
+
+			<label for="idStudio"><b>IdStudio</b></label> <input type="text"
+				placeholder="Inserisci id" name="idStudio" id="idStudio" required>
+				
+			<label for="titolo"><b>Titolo</b></label> <input type="text"
+				placeholder="Inserisci titolo" name="titolo" id="titolo" required>
+				
+			
+				
+					<label for="descrizione"><b>Descrizione</b></label> <input type="text"
+				placeholder="Inserisci descrizione" name="descrizione" id="descrizione" required>
+			
+
+		
+
+			<hr>
+			
+
+			<button type="submit" class="bottoni pulsanticolori">Conferma</button>
+
+		</div>
+
+	
+	</form>
+	<div th:insert="fragments/footer::footer-block"></div>
+
+</body>
+</html>

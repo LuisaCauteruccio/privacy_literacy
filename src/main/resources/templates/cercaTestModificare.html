@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http//www.thymeleaf.org">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link th:href="@{/css/cssSito.css}" rel="stylesheet">
+<title>Cerca Gioco</title>
+<style>
+body {
+	font-family: sans-serif;
+}
+
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+	background-color: #ddd;
+	outline: none;
+}
+
+hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+
+a {
+	color: dodgerblue;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+b {
+	font-family: sans-serif;
+}
+
+p {
+	font-family: sans-serif;
+}
+</style>
+</head>
+<body>
+
+	<div th:insert="fragments/header::header-block"></div>
+	<br>
+	<br>
+
+
+
+
+	<form method="POST" action="cercaTestMod" id="cercaTestModificare">
+		<div class="container">
+			<h1 class="titolo">Cerca un testche vuoi modificare</h1>
+			<p style="text-align: center;">Inserisci l'id di un test che vuoi modificare e i nuovi dati</p>
+			<hr>
+
+			
+
+			<label for="idTest"><b>idGioco</b></label> <input type="text"
+				placeholder="Inserisci id" name="idTest" id="idTest" required>
+
+			<label for="idGioco"><b>Titolo</b></label> <input type="text"
+				placeholder="Inserisci TITOLO" name="titolo" id="titolo" required>
+				
+			<label for="idGioco"><b>tipo</b></label> <input type="text"
+				placeholder="Inserisci TIPO" name="tipo" id="tipo" required>
+
+			<hr>
+		</div>
+		<div style="text-align: center;">
+			<button class="bottoni pulsanticolori">Modifica</button>
+			
+		</div>
+	</form>
+
+
+
+	<div th:insert="fragments/footer::footer-block"></div>
+
+</body>
+</html>

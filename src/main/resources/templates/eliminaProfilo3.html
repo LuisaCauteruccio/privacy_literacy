@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<link th:href="@{/css/cssSito.css}" rel="stylesheet">
+<title>Elimina profilo</title>
+</head>
+<style>
+
+.elimina{
+
+	text-align:center;
+	font-family:sans-serif;
+	font-size:20px;
+	border:solid;
+	color:darkorange;
+}
+
+.homeElimina{
+
+	text-align:center;
+	font-size:20px;
+	font-family:sans-serif;
+}
+</style>
+<body>
+
+<div th:insert="fragments/header::header-block"></div>
+
+
+
+
+<br>
+<p class="elimina"> Hai eliminato il tuo profilo </p>
+<a class="homeElimina">Ritorna alla home</a>
+
+
+
+
+<div th:insert="fragments/footer::footer-block"></div>
+</body>
+</html>

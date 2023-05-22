@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http//www.thymeleaf.org">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login</title>
+<link th:href="@{/css/cssSito.css}" rel="stylesheet">
+
+</head>
+<body>
+	<div th:insert="fragments/header::header-block"></div>
+	<br>
+	<br>
+	<h2 class="titolo">Login Form</h2>
+
+	<form action="login" method="POST" class="formlogin"
+		modelAttribute="login">
+		<div class="imgcontainer" style="text-align:center;">
+			<img class="logo" alt="logo.png"
+				src="https://img.icons8.com/ios/512/user.png" style="width: 100px;">
+		</div>
+
+
+		<div class="container">
+			<label for="email"><b class="campo"
+				style="font-family: sans-serif">Email</b></label> 
+				<input type="text"	placeholder="Inserisci email" name="email" id="emai" required>
+
+			<label for="psw" class="campi"><b
+				style="font-family: sans-serif">Password</b></label> <input type="password"
+				placeholder="Inserisci Password" name="password" id="password"
+				required>
+
+			<button type="submit" class="bottoni pulsanticolori">Accedi
+			</button>
+			<br> <br> <label> <input type="checkbox"
+				checked="checked" name="remember"> <b
+				style="font-family: sans-serif">Ricordami</b>
+			</label>
+		</div>
+
+		<div class="container"style="background-color: #f1f1f1">
+
+			<span class="psw" style="font-family: sans-serif">Se non hai un account
+			</span> <br> <br>
+		
+			<div>
+				<a href="reg" class="reg" style="font-family: sans-serif; color:darkblue; font-weight:bold;">
+					 Registrati</a>
+					</div>
+			
+		</div>
+	</form>
+	<div th:insert="fragments/footer::footer-block"></div>
+</body>
+</html>

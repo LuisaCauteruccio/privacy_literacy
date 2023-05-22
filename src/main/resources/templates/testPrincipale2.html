@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http//www.thymeleaf.org">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link th:href="@{/css/cssSito.css}" rel="stylesheet">
+<title>Sezione TP utente</title>
+<style>
+body {
+	font-family: sans-serif;
+}
+
+input[type=text], input[type=password] {
+	width: 100%;
+	padding: 15px;
+	margin: 5px 0 22px 0;
+	display: inline-block;
+	border: none;
+	background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+	background-color: #ddd;
+	outline: none;
+}
+
+hr {
+	border: 1px solid #f1f1f1;
+	margin-bottom: 25px;
+}
+
+a {
+	color: dodgerblue;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+b {
+	font-family: sans-serif;
+}
+
+p {
+	font-family: sans-serif;
+}
+
+.colonna {
+	font-family: sans-serif;
+	font-size: 15px;
+	color: darkorange;
+	border: solid;
+	border-color: black;
+}
+
+.colonna1 {
+	font-family: sans-serif;
+	font-size: 15px;
+	color: darkorange;
+}
+
+.table {
+	width: 100%;
+	margin-bottom: 1rem;
+	color: black;
+	margin: auto;
+	border: solid;
+}
+
+.sotto {
+	text-align: center;
+	font-size: 25x;
+	font-weight: bold;
+}
+
+.tr {
+	border: solid;
+}
+.modEli{
+
+	font-family:sans-serif;
+	color:black;
+}
+.homeReturn{
+
+	font-family:sans-serif;
+	color:black;
+}
+</style>
+
+</head>
+
+
+<body>
+
+	<div th:insert="fragments/header::header-block"></div>
+	<br>
+	<br>
+	<form  modelAttribute="listaDomande">
+		<div class="container">
+			<h1 class="titolo">Test Principale</h1>
+			<br>
+			<p class="sotto">Rispondi a tutte le domande e compila il test principale</p>
+
+			<br>
+			
+			
+			<table class="table">
+				<thead class="text-center">
+					<tr class="tr">
+
+						<th scope="col" class="colonna">idDomanda</th>
+						<th scope="col" class="colonna">Testo</th>
+						<th scope="col" class="colonna">Risposta1</th>
+						<th scope="col" class="colonna">Risposta2</th>
+						<th scope="col" class="colonna">Risposta3</th>
+						<th scope="col" class="colonna">Risposta Corretta</th>
+						<th scope="col" class="colonna">idTest</th>
+						
+						
+					
+					
+						
+					</tr>
+				</thead>
+				
+				<tr>
+				
+				<tr th:each="listaDomande : ${listaDomande}">
+					<td th:text="${listaDomande.idDomanda}" class="colonna1" id="email" scope="col">idDomanda</td>
+					<td th:text="${listaDomande.testo}" class="colonna1" scope="col">testo</td>
+					<td th:text="${listaDomande.risposta1}" class="colonna1">risposta1</td>
+					<td th:text="${listaDomande.risposta2}" class="colonna1">risposta2</td>
+					<td th:text="${listaDomande.risposta3}" class="colonna1">risposta3</td>
+					<td th:text="${listaDomande.risposta_corretta}" class="colonna1">risposta_corretta</td>
+					<td th:text="${listaDomande.idTest}" class="colonna1">idTest</td>
+					
+	
+				
+
+				</tbody>
+
+			</table>
+
+			<br> <br> <br>
+
+			<div class="pulsanti">
+				<a href="nuovaDomanda" class="modEli">Aggiungi domanda</a>
+				<br>
+				<a href="cercaDomandaModificare" class="modEli">Modifica domanda</a>
+				<br>
+				<a href="cercaDomanda" class="modEli">Elimina domanda</a>
+				<br>
+				<br> <br>
+				
+				
+			</div>
+			
+			<br>
+
+		</div>
+
+	</form>
+	<br>
+	<br>
+
+	<div th:insert="fragments/footer::footer-block"></div>
+
+</body>
+ 
+</html>

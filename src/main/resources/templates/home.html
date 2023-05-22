@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http//www.thymeleaf.org">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Home</title>
+<link th:href="@{/css/cssSito.css}" rel="stylesheet">
+<script type="text/javascript" th:src="@{/js/function.js}"></script>
+
+
+</head>
+<style>
+
+.slideshow-container{
+
+	background-color:deepSkyBlue;
+	font-size:20px;
+	
+	border:2px solid blue;
+	font-style:oblique;
+	
+}
+
+.contenuto{
+
+	color:white;
+	font-family:sans-serif;
+}
+</style>
+<body>
+	<div th:insert="fragments/header::header-block"></div>
+	<br>
+	<br>
+
+	<div class="slideshow-container" style="text-align: center;">
+		<!-- inizio container -->
+<!-- 
+		<img class="imghome"
+			src="https://www.eea.europa.eu/it/legal/privacy/image_large">
+ -->
+ 
+ 	<p class="contenuto">Benvenuti su "privacy for you"!
+ 	
+ 	<p class="contenuto"> Il primo portale che ti insegna come proteggere i tuoi dati online.</p>
+ 	<p  class="contenuto"> In modo divertente, grazie ai giochi e a una
+ 	sezione dedicata allo studio formata da video e immagini.</p>
+ <p  class="contenuto">	Potrai allenarti grazie alla nostra sezione test! </p>
+ <p  class="contenuto">	 In modo che tu possa evitare e sconfiggere tutti gli attacchi alla privacy </p>
+ 	<p  class="contenuto"> Per iniziare fai il test! Ti assegneremo un livello iniziale dal quale potrai partire per migliorarti. </p>
+	</div>
+	<!-- fine container -->
+	<br>
+
+
+
+	<h2 class="domanda" style="font-size: 20px">Quanto ne sai di
+		privacy?</h2>
+	<div style="text-align: center;">
+		<a href="tp"><button class="bottoni pulsanticolori">Fai
+				il test</button></a>
+
+		<!-- si mostra il login se l'utente non è già loggato 
+    	altrimenti si mostra la schermata del test principale -->
+	</div>
+
+	<br>
+	<br>
+	<div th:insert="fragments/footer::footer-block"></div>
+</body>
+</html>

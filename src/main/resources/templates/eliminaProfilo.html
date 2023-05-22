@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http//www.thymeleaf.org">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link th:href="@{/css/cssSito.css}" rel="stylesheet">
+<title>Profilo Utente</title>
+<style>
+
+
+.elimina{
+
+	text-align:center;
+	font-family:sans-serif;
+	font-size:20px;
+	font-style:oblique;
+	color:blue;
+}
+
+.homeElimina{
+
+text-align:center;
+	font-size:15px;
+	font-family:sans-serif;
+	
+	color:black;
+}
+</style>
+</head>
+
+
+<body>
+
+	<div th:insert="fragments/header::header-block"></div>
+	<br>
+	<br>
+	
+			<br>
+
+	<p class="elimina">Il tuo profilo e stato eliminato correttamento</p>
+	<br>
+	<br>
+	<div style="text-align:center;">
+	<a href="home" class="elimina">Ritorna alla home</a>
+	</div>
+	<br>
+	<br>
+	<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+	<div th:insert="fragments/footer::footer-block"></div>
+
+</body>
+</html>

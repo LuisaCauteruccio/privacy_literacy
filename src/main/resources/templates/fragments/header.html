@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http//www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title> Privacy Learning-header con boot esterno</title>
+<link th:href = "@{/css/cssSito.css}" rel="stylesheet">
+
+</head>
+<style>
+
+.nomeSito{
+
+	color:black; 
+	font-family:sans-serif; 
+	font-size:25px;
+}
+</style>
+<body>
+
+<header th:fragment="header-block">
+
+<nav>
+<div class="contenutoNav">
+
+
+	<ul class="listaNav">
+			<li class="iconNav"> <!-- elemento che contiene le icone -->
+			
+				 <a href="homeAmm"><button class="bottoni pulsanticolori">AMMINISTRATORE</button></a> 
+			
+			
+			
+				 <a href="login"><button class=" bottoni pulsanticolori ">ACCEDI</button></a>
+				 <br> <br>
+				
+			 </li>
+		
+			<!-- logo -->
+			<li class="logoNav"> 
+				<div class= "logoContenitore">
+			<!-- logo 	<img class="logo" alt="foto logo" src=" https://img.icons8.com/external-prettycons-flat-prettycons/512/external-privacy-web-seo-prettycons-flat-prettycons-1.png" style="width:100px;"> -->
+	<img class="logo" th:src="@{/images/logobuono.png}" alt="logo" style="width:30; height:30; margin-bottom:35px;">
+	
+                    
+				  	
+			  	</div>
+			  				 
+			</li>
+		 <li class="iconNav">
+		 <div style="text-align:center;">
+		 <img class="logout" src="https://img.icons8.com/windows/512/exit.png" style="width:45px;">
+		 <br>
+		 <a href="logout"><button class=" bottoni pulsanticolori ">ESCI</button></a></div>
+		 </div>
+			
+		
+			
+			
+			<li  id="navbarVerde">
+					<div class="topnav" id="myTopnav">
+		  				<a href="home" class="item" style="font-family:sans-serif;">HOMEPAGE</a>
+						  <a href="sezioneTest" class="item" style="font-family:sans-serif;">TEST</a>
+						   <a  href="sezioneGiochi" class="item" style="font-family:sans-serif;">GIOCHI</a>
+						  <a  class="item" style="font-family:sans-serif; color:white;"> STUDIO</a>
+						 	<a href="profilo" class="item" style="font-family:sans-serif;"> PROFILO</a>
+						 
+							  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+							    <i class="fa fa-bars"></i>
+							  </a>
+							
+</div>
+	 
+			</li>
+			
+	 
+		
+	</ul>
+</div>
+</nav>
+
+</header>
+</body>
+</html>
